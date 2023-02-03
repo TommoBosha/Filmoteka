@@ -7,11 +7,14 @@
 @import './base/container';
 
 @import './commponents/button';
-@import './commponents/modal-film';
-@import './commponents/spiner';
+@import './commponents/modal-movie';
+@import './commponents/modal-auth';
+@import './commponents/backdrop';
+@import './commponents/spinner';
 @import './commponents/modal-footer';
 @import './commponents/pagination';
 @import './commponents/films';
+@import './commponents/switcher';
 
 @import './layout/header';
 @import './layout/header-main';
