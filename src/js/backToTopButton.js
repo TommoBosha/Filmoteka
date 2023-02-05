@@ -4,7 +4,7 @@ window.onscroll = function () { scrollFunction() };
 topButton.addEventListener('click', topFunction);
 
 function scrollFunction() {
-  if (document.body.scrollTop > 5 || document.documentElement.scrollTop > 5) {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
     topButton.style.display = "block";
   } else {
     topButton.style.display = "none";
