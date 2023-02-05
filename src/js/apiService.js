@@ -101,4 +101,4 @@ export default class ApiService {
 export const fetchApi = new ApiService({
     page: Number(localStorage.getItem('page') || 1),
     searchQuery: localStorage.getItem('searchQuery') || '',
-});
+}); 
