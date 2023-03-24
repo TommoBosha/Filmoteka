@@ -14,10 +14,12 @@ function refreshTrandsFoo() {
 
 refreshTrands.addEventListener('click', refreshTrandsFoo);
 if (homeBtn) homeBtn.addEventListener('click', refreshTrandsFoo);
+
+
 export default class ApiService {
     constructor(opt) {
-        this.searchQuery = opt.searchQuery;
-        this.page = opt.page;
+        this.searchQuery = '';
+        this.page = 1;
         this.key = 'api_key=ddec42efa7dad57904cab0b807fa902e';
         this.genres = [];
 
@@ -64,15 +66,18 @@ export default class ApiService {
     }
 
     // трендові фільми //
-    async fetchTrendMovies() {
+    async fetchTrendMovies(page) {
         try {
             const url = `https://api.themoviedb.org/3/trending/movie/day?${this.key}&page=${this.page}`;
             const response = await axios.get(url);
+            console.log(response)
             return response.data;
         } catch (error) {
-            console.error(error);
+            console.error('Smth wrong with api get full trends' + error);
         }
     }
+
+
     //пошук по ключовому слову //
     async fetchByKeyWord() {
         console.log("fetchByKeyWord")

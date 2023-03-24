@@ -24,7 +24,7 @@ const options = {
     page: Number(localStorage.getItem('page') || 1),
     firstItemClassName: 'tui-first-child',
     lastItemClassName: 'tui-last-child',
-    
+
 };
 
 
@@ -54,7 +54,7 @@ async function fetchMovies() {
     } catch (error) {
         console.error(error);
     }
-stopSpinner()
+    stopSpinner()
     isFetching = false;
 }
 
@@ -74,8 +74,8 @@ if (container) {
     fetchMovies();
 }
 
-function notActive (itemsPerPage) {
-    if (itemsPerPage <= 20){
+function notActive(itemsPerPage) {
+    if (itemsPerPage <= 20) {
         firstBtn.classList.add('visually-hidden');
         lastBtn.classList.add('visually-hidden')
     }
